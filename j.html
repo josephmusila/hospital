@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <!--javascript offline-->
+    <script type="text/javascript" src="C:\Users\user\Desktop\bootstrap\new.js"></script>
+    <link rel="stylesheet" href="hos.css">
+    <script>
+        /*$(document).ready(function(){
+            $("li").eq(0).css("color","green");
+            $("li").eq(3).css("font-size","30px");
+            $("ul").css("background-color","blue");
+            $("ul").css("max-width","fit-content");
+            $("ul").css("margin-left","100px");
+        });*///
+        /*$(document).ready(function(){
+            $("div:first").width(100);
+            $("div:first").css("background-color","red");
+            $("div:second").css("background","yellow");
+        });*/
+        /*$(document).ready(function(){
+            $("div").click(function(){
+                var content=$(this).html();
+                $("#result").text(content);
+
+            });
+        });*/
+        /*$(document).ready(function(){
+            $("div").click(function(){
+                $(this).replaceWith("<hi>jquery is great</h1>");
+            });
+        }); */
+        $(document).ready(function(){
+            $('div').bind('click',function(event){
+                alert("hi there");
+            });
+        });
+    </script>
+    <style>
+        #division{
+            
+            margin: 10px;
+            padding: 12px;
+            border: 2px;
+            border-style: solid;
+            width: 60px;
+        }
+    </style>
+    
+</head>
+<bod>
+    <p>click on the square below:</p>
+    <div class="div" style="background-color: chartreuse;">one</div>
+    <div class="div" style="background-color: green;">two</div>
+    <div class="div" style="background-color: rgb(63, 11, 131);">three</div>
+    <div class="div" style="background-color: rgb(177, 13, 81);">four</div>
+</body>
+</html>

@@ -21,22 +21,35 @@
     <!--javascript offline-->
     <script type="text/javascript" src="C:\Users\user\Desktop\bootstrap\new.js"></script>
     <link rel="stylesheet" href="hos.css">
+    <script>
+            
+            
+            $(document).ready(function(){
+                $("body").css("background-color","rgb(50,50,50)");
+                $('form,.col').css("color","white");
+            });
+            $(document).ready(function(){
+                $(".footer").css("height","50px");
+                $(".footer").css("background-color","rgb(70,70,70)");
+                $(".footer").css("text-align","right");
+            });
+            $(document).ready(function(){
+                $("footer p").css("color","blue");
+                 $("footer p").css("font-size","20px");
+            });
+            $(document).ready(function(){
+                $("#submit").click(function(){
+                    $(this).css("background-color","green");
+                });
+            });
+        </script>
 </head>
 
 <body>
     <div class="container-fluid">
 
-        <script>
-            function validateForm() {
-                var password = document.getElementsByName("password")[0].value;
-                var length = password.length;
-                if (length > 8) {
-                    alert("use only 8 characters");
-                    return false;
-                }
-            }
-        </script>
-
+        
+            
         <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
             <a href="#" class="navbar-brand">INFINITY MEDICAL SERVICES<box height="30px" width="100px"></a>
             <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
@@ -45,83 +58,93 @@
             <div class="collapse navbar-collapse " id="#navbarMenu">
                 <ul class="navbar-nav ml-auto">
                     <li class="navbar-item">
-                        <a href="#" class="nav-link">Women </a>
+                        <a href="#" class="nav-link">CONTACTS </a>
                     </li>
                     <li class="navbar-item">
-                        <a href="men.html" class="nav-link" onclick="log()">Men </a>
+                        <a href="#" class="nav-link">APP</a>
                     </li>
                     <li class="navbar-item">
-                        <a href="#" class="nav-link">kids</a>
+                        <a href="#" class="nav-link">SERVICES</a>
                     </li>
                     <li class="navbar-item">
-                        <a href="#" class="nav-link">Trending</a>
+                        <a href="#" class="nav-link">LINKS</a>
                     </li>
                 </ul>
             </div>
         </nav>
-        <div class="container-fluid">
-            <div class="categories">
+    </div>
+    <div class="container-fluid">
+        <div class="categories"></div>
+        <div class="row">
+            <div class="col-3 bg-dark">
+                <div class="alert alert-primary">CATEGORIES</div>
+                <div class="btn btn-outline-warning btn-block"><a href="register.html">REGISTER</a></div>
+                <div class="btn btn-outline-warning btn-block"><a href="profile.php">MY PROFILE</a></div>
+                <div class="btn btn-outline-warning btn-block" onclick="log()"><a href="doctor.html">CONSULTDOCTOR</a>
+                </div>
+                <div class="btn btn-outline-warning btn-block"><a href="about.html">ABOUT US</a></div>
+                <div class="btn btn-outline-warning btn-block"><a href="contact.html">CONTACTS</a></div>
+                <div class="btn btn-outline-warning btn-block"><a href="emergency.html">EMERGENCIES</a></div>
+                <div class="btn btn-outline-warning btn-block"><a href="ambulance.html">AMBULANCE SERVICES</a></div>
+                <div class="btn btn-outline-warning btn-block"><a href="faq.html">FAQS</a></div>
+                <div class="btn btn-outline-warning btn-block"><a href="remote.html">REMOTE SERVICES</a></div>
+                <div class="btn btn-outline-warning btn-block"><a href="help.html">HELP</a></div>
+                <hr class="my5">
+            </div>
+            <div class="col-9">
+                <div class="alert alert-danger">24 hours of unlimited care</div>
                 <div class="row">
-                    <div class="col-3 bg-dark">
-                        <div class="alert alert-primary">CATEGORIES</div>
-                        <div class="btn btn-outline-warning btn-block"><a href="register.html">REGISTER</a></div>
-                        <div class="btn btn-outline-warning btn-block"><a href="profile.php">MY PROFILE</a></div>
-                        <div class="btn btn-outline-warning btn-block"><a href="doctor.html">CONSULT DOCTOR</a></div>
-                        <div class="btn btn-outline-warning btn-block"><a href="about.html">ABOUT US</a></div>
-                        <div class="btn btn-outline-warning btn-block"><a href="contact.html">CONTACTS</a></div>
-                        <div class="btn btn-outline-warning btn-block"><a href="emergency.html">EMERGENCIES</a></div>
-                        <div class="btn btn-outline-warning btn-block"><a href="ambulance.html">AMBULANCE SERVICES</a>
-                        </div>
-                        <div class="btn btn-outline-warning btn-block"><a href="faq.html">FAQS</a></div>
-                        <div class="btn btn-outline-warning btn-block"><a href="remote.html">REMOTE SERVICES</a></div>
-                        <div class="btn btn-outline-warning btn-block"><a href="help.html">HELP</a></div>
-                        <hr class="my5">
+
+                    <div class="col">
+                        <form action="hospital.php" method="post" onsubmit="return validateForm()" name="myform">
+                        
+                        FIRST NAME:</br>
+                        <input type="text" name="firstname" class="name" required></br>
+                        LAST NAME:</br>
+                        <input type="text" name="lastname" class="name" required></br>
+                        EMAIL:</BR>
+                        <input type="text" name="email" class="name" required> </br>
+                        PHONE:<br>
+                        <input type="text" name="phone" class="name" required><br><br>
+                        ID NUMBER:<br>
+                        <input type="number" name="id" class="name" required><br><br>
                     </div>
                     <div class="col">
-                        <div class="alert alert-danger">24 hours of unlimited care</div>
-                        <div class="row">
-                            <div class="col">
-                                <div class="forrm">
-                                    <form action="hospital.php" method="post" onsubmit="return validateForm()">
-                                        FIRST NAME:</br>
-                                        <input type="text" name="firstname" class="name" required></br>
-                                        LAST NAME:</br>
-                                        <input type="text" name="lastname" class="name" required></br>
-                                        EMAIL:</BR>
-                                        <input type="text" name="email" class="name" required> </br>
-                                        PHONE:<br>
-                                        <input type="text" name="phone" class="name" required><br><br>
-                                        PASSWORD:</br>
-                                        <input type="password" name="password" class="name" required></br></br>
+                        AGE:<br>
+                        <input type="number" name="age" class="name" required><br><br>
+                        PASSWORD:</br>
+                        <input type="password" name="password" class="name" required></br></br>
 
-                                        GENDER: <select name="gender" required>
+                        GENDER: <select name="gender" required>
 
-                                            <option>MALE</option>
-                                            <option>FEMALE</option>
-                                            <option>RATHER NOT SAY</option>
-                                        </select></br></br>
-                                        STATUS: <select name="status" required>
-
-                                            <option>MARRIED</option>
-                                            <OPTION>SINGLE</OPTION>
-                                            <OPTION>DIVORCED</OPTION>
-                                            <OPTION>WIDOWED</OPTION>
-                                        </select></br></br>
-                                        <input type="submit" class="btn  btn-primary " name="submit" type="submit"><br>
-                                        
-
-                                    </form>
-
-                                </div>
-                                
-                            </div>
-
-
-                        </div>
+                            <option>MALE</option>
+                            <option>FEMALE</option>
+                            <option>RATHER NOT SAY</option>
+                        </select></br></br>
+                        STATUS: <select name="status" required>
+                            <option>MARRIED</option>
+                            <OPTION>SINGLE</OPTION>
+                            <OPTION>DIVORCED</OPTION>
+                            <OPTION>WIDOWED</OPTION>
+                        </select></br></br>
+                        EMPLOYED:<select name="employed" required>
+                            <option>YES</option>
+                            <option>NO</option>
+                        </select><BR>
                     </div>
+                    <input type="submit" class="btn  btn-primary btn-block" name="submit" type="submit" id="submit">
                 </div>
+
             </div>
+
+
         </div>
+        <footer>
+            <div class="footer">
+                <p>TERMS AND CONDITIONS APPLY</p>
+            </div>
+        </footer>
+    </div>
 </body>
 
 </html>

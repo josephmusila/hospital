@@ -8,14 +8,14 @@
         if($count==0) {
             $message = "Invalid Username or Password!";
         } else {
-            $message = "You are successfully authenticated!";
+            header("location:doctor.html");
         }
     }
     ?>
     <html>
     <head>
     <title>User Login</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="hos.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
@@ -31,7 +31,30 @@
         crossorigin="anonymous"></script>
     <!--javascript offline-->
     <script type="text/javascript" src="C:\Users\user\Desktop\bootstrap\new.js"></script>
-    <link rel="stylesheet" href="hos.css">
+    <script>
+          $(document).ready(function(){
+                $("body").css("background-color","rgb(50,50,50)");
+                $('form,.col').css("color","white");
+            });
+            $(document).ready(function(){
+                $(".footer").css("height","50px");
+                $(".footer").css("background-color","rgb(70,70,70)");
+                $(".footer").css("text-align","right");
+            });
+            $(document).ready(function(){
+                $("footer p").css("color","blue");
+                 $("footer p").css("font-size","20px");
+            });
+            /*$(document).ready(function(){
+                $("footer").mouseOver("text-align","center");
+            });*/
+            $(document).ready(function(){
+                $("#dividty").css("max-width","fit-content");
+                $("#dividty").css("height","auto");
+                $("#dividty").css("background-color","brown");
+            });
+    </script>
+    
 </head>
     </head>
     <body>
@@ -68,9 +91,9 @@
                 <div class="row">
                     <div class="col-3 bg-dark">
                         <div class="alert alert-primary">CATEGORIES</div>
-                        <div class="btn btn-outline-warning btn-block"><a href="register.html">REGISTER</a></div>
+                        <div class="btn btn-outline-warning btn-block"><a href="register.html" >REGISTER</a></div>
                         <div class="btn btn-outline-warning btn-block"><a href="profile.php">MY PROFILE</a></div>
-                        <div class="btn btn-outline-warning btn-block"><a href="doctor.html">CONSULT DOCTOR</a></div>
+                        <div class="btn btn-outline-warning btn-block"><a href="doctor.html" onclick="log()">CONSULT DOCTOR</a></div>
                         <div class="btn btn-outline-warning btn-block"><a href="about.html">ABOUT US</a></div>
                         <div class="btn btn-outline-warning btn-block"><a href="contact.html">CONTACTS</a></div>
                         <div class="btn btn-outline-warning btn-block"><a href="emergency.html">EMERGENCIES</a></div>
@@ -80,25 +103,30 @@
                         <div class="btn btn-outline-warning btn-block"><a href="help.html">HELP</a></div>
                         <hr class="my5">
                     </div>
-    <form name="frmUser" method="post" action="">
-        <div class="message"><?php if($message!="") { echo $message; } ?></div>
-            <table  cellpadding="10" cellspacing="1" width="500"  class="tblLogin">
-                <tr class="tableheader">
-                <td  colspan="2">Enter Login Details</td>
-                </tr>
-                <tr class="tablerow">
-                <td>
-                <input type="text" name="firstname" placeholder="firstname" class="login-input" required></td>
-                </tr>
-                <tr class="tablerow">
-                <td>
-                <input type="password" name="password" placeholder="Password" class="login-input" required></td>
-                </tr>
-                <tr class="tableheader">
-                <td  colspan="2"><input type="submit" name="submit" value="Submit" class="btnSubmit"></td>
-                </tr>
-            </table>
-    </form>
-    <a href="register.html">sign up</a>
-    </body>
-    </html>
+                    <div id="dividty">
+                        <div class="col-3 " >
+                            <form name="frmUser" method="post" action="" class="pro">
+                                <div class="message"><?php if($message!="") { echo $message; } ?></div></br>
+                                 <p>Enter Login Details</p>
+                                <input type="text" name="firstname" placeholder="firstname"  required><br><br>
+                                <input type="password" name="password" placeholder="Password" required><br><br>
+                                <input type="submit" name="submit" value="Submit" class="btnSubmit" id="dividy"><br><!--jquery id-->
+                                <a href="register.html">sign up</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+                
+     <footer>
+            <div class="footer">
+                <p>TERMS AND CONDITIONS APPLY</p>
+            </div>
+        </footer>
+           
+    
+    </div>
+    
+</body>
+</html>

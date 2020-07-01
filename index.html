@@ -20,6 +20,26 @@
     <!--javascript offline-->
     <script type="text/javascript" src="C:\Users\user\Desktop\bootstrap\new.js"></script>
     <link rel="stylesheet" href="hos.css">
+    <script>
+            
+            
+            $(document).ready(function(){
+                $("body").css("background-color","rgb(50,50,50)");
+                $('form,.col').css("color","white");
+            });
+            $(document).ready(function(){
+                $(".footer").css("height","50px");
+                $(".footer").css("background-color","rgb(70,70,70)");
+                $(".footer").css("text-align","right");
+            });
+            $(document).ready(function(){
+                $("footer p").css("color","blue");
+                 $("footer p").css("font-size","20px");
+            });
+            /*$(document).ready(function(){
+                $("footer").mouseOver("text-align","center");
+            });*/
+        </script>
 </head>
 <body>
     <div class="container-fluid">
@@ -56,7 +76,7 @@
                     <div class="col-3 bg-dark">
                         <div class="alert alert-primary">CATEGORIES</div>
                         <div class="btn btn-outline-warning btn-block"><a href="register.html">REGISTER</a></div>
-                        <div class="btn btn-outline-warning btn-block"><a href="profile.html">MY PROFILE</a></div>
+                        <div class="btn btn-outline-warning btn-block"><a href="profile.php">MY PROFILE</a></div>
                         <div class="btn btn-outline-warning btn-block"><a href="doctor.html">CONSULT DOCTOR</a></div>
                         <div class="btn btn-outline-warning btn-block"><a href="about.html">ABOUT US</a></div>
                         <div class="btn btn-outline-warning btn-block"><a href="contact.html">CONTACTS</a></div>
@@ -75,6 +95,11 @@
                     </div>
                 </div>
             </div>
+            <footer>
+            <div class="footer">
+                <p>TERMS AND CONDITIONS APPLY</p>
+            </div>
+        </footer>
         </div>
 </body>
 </html>
