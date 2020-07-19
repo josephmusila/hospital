@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="file:///C:/xampp/htdocs/tukenya/hos.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
@@ -18,7 +19,7 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
     <!--javascript offline-->
-    <script type="text/javascript" src="C:\Users\user\Desktop\bootstrap\new.js"></script>
+    <script src="new.js"></script>
     <script>
             
             
@@ -35,9 +36,9 @@
                 $("footer p").css("color","blue");
                  $("footer p").css("font-size","20px");
             });
-            /*$(document).ready(function(){
-                $("footer").mouseOver("text-align","center");
-            });*/
+            $(document).ready(function(){
+                $(".locations").css("color","white");
+            });
         </script>
 </head>
 <body>
@@ -55,16 +56,16 @@
             <div class="collapse navbar-collapse " id="#navbarMenu">
                 <ul class="navbar-nav ml-auto">
                     <li class="navbar-item">
-                        <a href="#" class="nav-link">Women </a>
+                        <a href="#" class="nav-link">HISTORY</a>
                     </li>
                     <li class="navbar-item">
-                        <a href="men.html" class="nav-link" onclick="log()">Men </a>
+                        <a href="#" class="nav-link">MILESTONES</a>
                     </li>
                     <li class="navbar-item">
-                        <a href="#" class="nav-link">kids</a>
+                        <a href="#" class="nav-link">VISION</a>
                     </li>
                     <li class="navbar-item">
-                        <a href="#" class="nav-link">Trending</a>
+                        <a href="#" class="nav-link">SPONSORS</a>
                     </li>
                 </ul>
             </div>
@@ -74,7 +75,7 @@
                 <div class="row">
                     <div class="col-3 bg-dark">
                         <div class="alert alert-primary">CATEGORIES</div>
-                        <div class="btn btn-outline-warning btn-block"><a href="register.php">REGISTER</a></div>
+                        <div class="btn btn-outline-warning btn-block"><a href="register.html">REGISTER</a></div>
                         <div class="btn btn-outline-warning btn-block"><a href="profile.php">MY PROFILE</a></div>
                         <div class="btn btn-outline-warning btn-block"><a href="doctor.html">CONSULT DOCTOR</a></div>
                         <div class="btn btn-outline-warning btn-block"><a href="about.html">ABOUT US</a></div>
@@ -88,6 +89,21 @@
                     </div>
                     <div class="col-9">
                         <div class="alert alert-danger">24 hours of unlimited care</div>
+                        <div class="us">
+                            <div class="alert alert-success">
+                                We are located all over the country ready to serve you
+                            </div>
+                        </div>
+                        <div class="locations">
+                            <p id="loc">some of our main locations include</p>
+                            <ol>
+                                <li>Nairobi</li>
+                                <li>Mombasa</li>
+                                <li>Machakos</li>
+                                <li>Kisumu</li>
+                            </ol>
+                        </div>
+
                     </div>
                 </div>
             </div>

@@ -13,7 +13,7 @@ function validateForm(){
 		alert("use only 8 characters");
 		return false;
 	}
-	function validEmail(){
+	function validate(){
 		var email=document.myform.email.value;
 		atpos=emailID.indexOf("@");
 		dotpos=emailId.lastIndexOf(".");
@@ -34,10 +34,33 @@ $(document).ready(function(){
 	$("ul").css("margin-left","100px");
 });
 function validateForm() {
-                var password = document.getElementsByName("password")[0].value;
-                var length = password.length;
-                if (length > 8) {
-                    alert("use only 8 characters");
-                    return false;
-                }
-            }
+    var password = document.getElementsByName("password")[0].value;
+    var length = password.length;
+    if (length > 8) {
+        alert("use only 8 characters");
+        return false;
+    }
+}
+
+
+   function press(){
+    document.getElementById("here").style.color="red";
+
+    document.write("success");
+   };
+
+function submit(){
+	var age=document.getElementById("age").value;
+	if(age<10){
+		document.getElementById("age").style.color="red";
+
+	}else{
+		
+		document.getElementById("age").style.color="green";
+	};
+};
+function book(title,auther){
+	this.title=title;
+	this.auther=auther;
+};
+document.getElementById('loc').style.color="white";

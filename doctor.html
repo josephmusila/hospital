@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="file:///C:/xampp/htdocs/tukenya/hos.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
@@ -18,7 +19,7 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
     <!--javascript offline-->
-    <script type="text/javascript" src="C:\Users\user\Desktop\bootstrap\new.js"></script>
+    <script src="new.js"></script>
     <script>
             
             
@@ -42,11 +43,12 @@
 </head>
 <body>
     <div class="container-fluid">
-        <!--
-           <script>
-            thanks();
+        <script>
+            $.alert({
+                title:'alert',
+                content:'simple alert'
+            });
         </script>
-       -->
         <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
             <a href="#" class="navbar-brand">INFINITY MEDICAL SERVICES<box  height="30px" width="100px"></a>
             <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
@@ -55,16 +57,16 @@
             <div class="collapse navbar-collapse " id="#navbarMenu">
                 <ul class="navbar-nav ml-auto">
                     <li class="navbar-item">
-                        <a href="#" class="nav-link">Women </a>
+                        <a href="#" class="nav-link" onclick="contact()">CALL</a>
                     </li>
                     <li class="navbar-item">
-                        <a href="men.html" class="nav-link" onclick="log()">Men </a>
+                        <a href="men.html" class="nav-link" onclick="log()">EMERGENCY</a>
                     </li>
                     <li class="navbar-item">
-                        <a href="#" class="nav-link">kids</a>
+                        <a href="#" class="nav-link">AMBULANCE</a>
                     </li>
                     <li class="navbar-item">
-                        <a href="#" class="nav-link">Trending</a>
+                        <a href="#" class="nav-link">APPOINTMENTS</a>
                     </li>
                 </ul>
             </div>
@@ -74,7 +76,7 @@
                 <div class="row">
                     <div class="col-3 bg-dark">
                         <div class="alert alert-primary">CATEGORIES</div>
-                        <div class="btn btn-outline-warning btn-block"><a href="register.php">REGISTER</a></div>
+                        <div class="btn btn-outline-warning btn-block"><a href="register.html">REGISTER</a></div>
                         <div class="btn btn-outline-warning btn-block"><a href="profile.php">MY PROFILE</a></div>
                         <div class="btn btn-outline-warning btn-block"><a href="doctor.html">CONSULT DOCTOR</a></div>
                         <div class="btn btn-outline-warning btn-block"><a href="about.html">ABOUT US</a></div>
@@ -88,6 +90,51 @@
                     </div>
                     <div class="col-9">
                         <div class="alert alert-danger">24 hours of unlimited care</div>
+                        <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="C:\Users\user\Desktop\telegram\fass.jpg">
+                    <div class="card-body">
+                        <h4 class="card-title">AGHA KHAN HOSPITAL</h4>
+                        <p class="card-text">
+                            world class health facilities and services
+                            .</p>
+                        <a href="#" class="btn btn-outline-secondary">See Profile</a>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="C:\Users\user\Desktop\telegram\fass.jpg">
+                    <div class="card-body">
+                        <h4 class="card-title">KENYATTA HOSPITAL</h4>
+                        <p class="card-text">
+                            Best and highiest level of medical services in kenya
+
+                            .</p>
+                        <a href="#" class="btn btn-outline-secondary" onclick="log()">See Profile</a>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="C:\Users\user\Desktop\telegram\fass.jpg">
+                    <div class="card-body">
+                        <h4 class="card-title">MATTER HOSPITAL</h4>
+                        <p class="card-text">Best surgical and complex health services.</p>
+                        <a href="#" class="btn btn-outline-secondary" onclick="africa()">See Profile</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
                     </div>
                 </div>
             </div>

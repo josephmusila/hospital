@@ -11,6 +11,8 @@
             header("location:doctor.html");
         }
     }
+
+    
     ?>
     <html>
     <head>
@@ -30,7 +32,7 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
     <!--javascript offline-->
-    <script type="text/javascript" src="C:\Users\user\Desktop\bootstrap\new.js"></script>
+    <script src="new.js"></script>
     <script>
           $(document).ready(function(){
                 $("body").css("background-color","rgb(50,50,50)");
@@ -53,17 +55,14 @@
                 $("#dividty").css("height","auto");
                 $("#dividty").css("background-color","brown");
             });
+
     </script>
     
 </head>
     </head>
     <body>
     <div class="container-fluid">
-        <!--
-           <script>
-            thanks();
-        </script>
-       -->
+        
         <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
             <a href="#" class="navbar-brand">INFINITY MEDICAL SERVICES<box  height="30px" width="100px"></a>
             <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
@@ -72,16 +71,16 @@
             <div class="collapse navbar-collapse " id="#navbarMenu">
                 <ul class="navbar-nav ml-auto">
                     <li class="navbar-item">
-                        <a href="#" class="nav-link">Women </a>
+                        <a href="register.html" class="nav-link">SIGN UP</a>
                     </li>
                     <li class="navbar-item">
-                        <a href="men.html" class="nav-link" onclick="log()">Men </a>
+                        <a href="#" class="nav-link" onclick="log()">MY LOGS</a>
                     </li>
                     <li class="navbar-item">
-                        <a href="#" class="nav-link">kids</a>
+                        <a href="help.html" class="nav-link">HELP</a>
                     </li>
                     <li class="navbar-item">
-                        <a href="#" class="nav-link">Trending</a>
+                        <a href="contact.html" class="nav-link">CONTACTS</a>
                     </li>
                 </ul>
             </div>
@@ -105,7 +104,7 @@
                     </div>
                     <div id="dividty">
                         <div class="col-3 " >
-                            <form name="frmUser" method="post" action="" class="pro">
+                            <form name="frmUser" method="post" action="" class="prof">
                                 <div class="message"><?php if($message!="") { echo $message; } ?></div></br>
                                  <p>Enter Login Details</p>
                                 <input type="text" name="firstname" placeholder="firstname"  required><br><br>

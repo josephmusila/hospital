@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+     <link rel="stylesheet" href="file:///C:/xampp/htdocs/tukenya/hos.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
@@ -19,8 +20,8 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
     <!--javascript offline-->
-    <script type="text/javascript" src="C:\Users\user\Desktop\bootstrap\new.js"></script>
-    <link rel="stylesheet" href="hos.css">
+    <script src="new.js"></script>
+   
     <script>
             
             
@@ -42,12 +43,31 @@
                     $(this).css("background-color","green");
                 });
             });
+            $(document).ready(function(){
+                $('.field input').on('keyup',function(){
+                    let empty = false;
+                    $('.field input').each(function(){
+                        empty=$(this).val().length == 0;
+                    });
+                    if(empty)
+                        $('.action input').atrr('disabled','disable');
+                    else
+                        $('.action input').atrr('disabled',false);
+                });
+            });
+            $("#submit").click(function(){
+                $("input").fadeOut();
+                 $("input").fadeOut("slow");
+                  $("input").fadeOut(3000);
+
+
+            });
         </script>
 </head>
 
 <body>
     <div class="container-fluid">
-
+     
         
             
         <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
@@ -58,7 +78,7 @@
             <div class="collapse navbar-collapse " id="#navbarMenu">
                 <ul class="navbar-nav ml-auto">
                     <li class="navbar-item">
-                        <a href="#" class="nav-link">CONTACTS </a>
+                        <a href="#" class="nav-link" onclick="contact()">CONTACTS </a>
                     </li>
                     <li class="navbar-item">
                         <a href="#" class="nav-link">APP</a>
@@ -76,7 +96,7 @@
     <div class="container-fluid">
         <div class="categories"></div>
         <div class="row">
-            <div class="col-3 bg-dark">
+            <div class="col-3 col-sm-0 bg-dark">
                 <div class="alert alert-primary">CATEGORIES</div>
                 <div class="btn btn-outline-warning btn-block"><a href="register.html">REGISTER</a></div>
                 <div class="btn btn-outline-warning btn-block"><a href="profile.php">MY PROFILE</a></div>
@@ -98,41 +118,51 @@
                     <div class="col">
                         <form action="hospital.php" method="post" onsubmit="return validateForm()" name="myform">
                         
-                        FIRST NAME:</br>
-                        <input type="text" name="firstname" class="name" required></br>
-                        LAST NAME:</br>
-                        <input type="text" name="lastname" class="name" required></br>
-                        EMAIL:</BR>
-                        <input type="text" name="email" class="name" required> </br>
-                        PHONE:<br>
-                        <input type="text" name="phone" class="name" required><br><br>
-                        ID NUMBER:<br>
-                        <input type="number" name="id" class="name" required><br><br>
+                        <div class="field">
+                            FIRST NAME:</br>
+                            <input type="text" name="firstname" class="name" required></br>
+                            LAST NAME:</br>
+                            <input type="text" name="lastname" class="name" required></br>
+                            EMAIL:</BR>
+                            <input type="text" name="email" class="name" required> </br>
+                            PHONE:<br>
+                            <input type="text" name="phone" class="name" required><br><br>
+                            ID NUMBER:<br>
+                            <input type="number" name="id" class="name" required><br><br>
+                        </div>
                     </div>
                     <div class="col">
-                        AGE:<br>
-                        <input type="number" name="age" class="name" required><br><br>
-                        PASSWORD:</br>
-                        <input type="password" name="password" class="name" required></br></br>
+                        <div class="field">
+                            AGE:<br>
+                            <input type="number" name="age" class="name" id="age" required><br>
+                            PASSWORD:</br>
+                            <input type="password" name="password" class="name" required></br>
+                            <div class=" form-group">
+                                <label for="inputfile">Upload a recent passport</label><br>
+                                <input type="file" id="inputfile">
+                            </div>
 
-                        GENDER: <select name="gender" required>
+                            GENDER: <select name="gender" required>
 
-                            <option>MALE</option>
-                            <option>FEMALE</option>
-                            <option>RATHER NOT SAY</option>
-                        </select></br></br>
-                        STATUS: <select name="status" required>
-                            <option>MARRIED</option>
-                            <OPTION>SINGLE</OPTION>
-                            <OPTION>DIVORCED</OPTION>
-                            <OPTION>WIDOWED</OPTION>
-                        </select></br></br>
-                        EMPLOYED:<select name="employed" required>
-                            <option>YES</option>
-                            <option>NO</option>
-                        </select><BR>
+                                <option>MALE</option>
+                                <option>FEMALE</option>
+                                <option>RATHER NOT SAY</option>
+                            </select></br></br>
+                            STATUS: <select name="status" required>
+                                <option>MARRIED</option>
+                                <OPTION>SINGLE</OPTION>
+                                <OPTION>DIVORCED</OPTION>
+                                <OPTION>WIDOWED</OPTION>
+                            </select></br></br>
+                            EMPLOYED:<select name="employed" required>
+                                <option>YES</option>
+                                <option>NO</option>
+                            </select><BR>
+                        </div>
                     </div>
-                    <input type="submit" class="btn  btn-primary btn-block" name="submit" type="submit" id="submit">
+                    
+                        <input type="submit" class="btn  btn-primary btn-block" name="submit" type="submit" id="submit">
+                    
                 </div>
 
             </div>
@@ -140,6 +170,11 @@
 
         </div>
         <footer>
+            <style type="text/css">
+                .footer{
+                    margin-top: 30px;
+                }
+            </style>
             <div class="footer">
                 <p>TERMS AND CONDITIONS APPLY</p>
             </div>

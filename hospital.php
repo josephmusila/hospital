@@ -12,11 +12,12 @@ $id=$_POST['id'];
 $age=$_POST['age'];
 $employed=$_POST['employed'];
 $password=$_POST['password'];
+
 $message="";
 if(!empty($firstname)| !empty($lastname)|| !empty($email) || !empty($gender)|| !empty($status)|| !empty($phone) || !empty($password)){
     $con = mysqli_connect("localhost","root","","hospital");
 
-    $query="INSERT INTO `member` (`firstname`, `lastname`, `email`, `phone`,`id`,`age`, `password`,`gender`,`status`,`employed`) VALUES ('$firstname', '$lastname', '$email', '$phone','$id','$age', '$password','$gender','$status','$employed');";
+    $query="INSERT INTO `member` (`firstname`, `lastname`, `email`, `phone`,`id`,`age`, `password`,`gender`,`status`,`employed`,`photo`) VALUES ('$firstname', '$lastname', '$email', '$phone','$id','$age', '$password','$gender','$status','$employed','photo');";
     mysqli_query($con,$query);
     if (mysqli_connect_errno()){
         echo"failed to connect to mysql: " . mysqli_connect_errno();
@@ -31,7 +32,8 @@ else{
 }
 
 
-$message="<p>YOU HAVE SUCCESFULLY REGISTERED YOU CAN NOW LOG IN</P>";
+$message="helo $firstname you have successfully registerd";
+
 
  
 
@@ -57,7 +59,7 @@ $message="<p>YOU HAVE SUCCESFULLY REGISTERED YOU CAN NOW LOG IN</P>";
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
     <!--javascript offline-->
-    <script type="text/javascript" src="C:\Users\user\Desktop\bootstrap\new.js"></script>
+    <script src="new.js"></script>
     <link rel="stylesheet" href="hos.css">
     <script>
             
@@ -75,9 +77,16 @@ $message="<p>YOU HAVE SUCCESFULLY REGISTERED YOU CAN NOW LOG IN</P>";
                 $("footer p").css("color","blue");
                  $("footer p").css("font-size","20px");
             });
-            /*$(document).ready(function(){
-                $("footer").mouseOver("text-align","center");
-            });*/
+           $(document).ready(function(){
+            $("#button").click(function(){
+                $("#button").effect("shake",{
+                    times:10,
+                    distance:100
+                },3000,function(){
+                    $(this).css("background-color","#cccccc");
+                });
+            });
+           });
         </script>
 </head>
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
@@ -103,5 +112,5 @@ $message="<p>YOU HAVE SUCCESFULLY REGISTERED YOU CAN NOW LOG IN</P>";
             </div>
         </nav>
 <div class="message"><?php if($message!="") { echo $message; } ?></div>
-
+<button class="btn btn-block btn-primary" value="button" id="button">button</button>
 <html>
